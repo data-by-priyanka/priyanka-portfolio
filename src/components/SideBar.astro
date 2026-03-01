@@ -1,1 +1,32 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import SideBarMenu from "./SideBarMenu.astro";
 
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+
+  <aside class="px-4 pt-6 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+
+    <!-- Branding Section -->
+    <div class="text-center mb-8">
+      <a href="/" class="block">
+        <h1 class="text-2xl font-bold">
+          Priyanka Mishra
+        </h1>
+        <p class="text-sm opacity-70 mt-1">
+          Data Analytics Portfolio
+        </p>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+
+    <!-- Footer -->
+    <SideBarFooter />
+
+  </aside>
+</div>
