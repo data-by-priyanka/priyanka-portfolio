@@ -1,1 +1,48 @@
+---
+const { sideBarActiveItemID } = Astro.props;
+const activeClass = "bg-base-300";
+---
 
+<ul class="menu grow shrink menu-md overflow-y-auto">
+
+  <li>
+    <a class="py-3 text-base" id="home" href="/">
+      About
+    </a>
+  </li>
+
+  <li>
+    <a class="py-3 text-base" id="projects" href="/projects">
+      Projects
+    </a>
+  </li>
+
+  <li>
+    <a class="py-3 text-base" id="blog" href="/blog/">
+      Learning Journey
+    </a>
+  </li>
+
+  <li>
+    <a class="py-3 text-base" id="certifications" href="/cv">
+      Certifications
+    </a>
+  </li>
+
+  <li>
+    <a
+      class="py-3 text-base"
+      href="https://github.com/data-by-priyanka"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub
+    </a>
+  </li>
+
+</ul>
+
+<script define:vars={{ sideBarActiveItemID, activeClass }}>
+  const activeItemElem = document.getElementById(sideBarActiveItemID);
+  activeItemElem && activeItemElem.classList.add(activeClass);
+</script>
