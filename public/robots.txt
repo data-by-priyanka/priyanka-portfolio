@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://data-by-priyanka.github.io/priyanka-mishra-portfolio/sitemap-index.xml
