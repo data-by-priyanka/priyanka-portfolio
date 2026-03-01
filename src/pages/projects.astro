@@ -1,1 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
 
+<BaseLayout 
+  title="Projects | Priyanka Mishra"
+  sideBarActiveItemID="projects"
+>
+
+  <section class="mb-12 mt-6">
+    <h1 class="text-4xl font-bold mb-4">
+      Data Analytics Projects
+    </h1>
+
+    <p class="text-lg opacity-80 max-w-3xl">
+      A collection of structured analytics projects demonstrating data cleaning,
+      transformation, visualization, and business insight generation.
+    </p>
+  </section>
+
+  <div class="divider my-6"></div>
+
+  <!-- Project 1 -->
+  <HorizontalCard
+    title="Fraud Detection Analysis"
+    img="/post_img.webp"
+    desc="Descriptive analysis of transaction patterns to identify behavioral anomalies and potential fraud indicators."
+    url="#"
+    target="_self"
+    badge="Case Study"
+    tags={["Excel", "Data Cleaning", "Descriptive Analytics"]}
+  />
+  <div class="divider my-0"></div>
+
+  <!-- Project 2 -->
+  <HorizontalCard
+    title="Excel Data Transformation Workflow"
+    img="/post_img.webp"
+    desc="Structured PDF-to-Excel transformation using Power Query and advanced formula logic."
+    url="#"
+    target="_self"
+    badge="Process Documentation"
+    tags={["Excel", "Power Query", "Automation"]}
+  />
+  <div class="divider my-0"></div>
+
+  <!-- Project 3 -->
+  <HorizontalCard
+    title="SQL Data Querying Practice"
+    img="/post_img.webp"
+    desc="Hands-on SQL practice covering filtering, aggregation, grouping, and business-oriented query development."
+    url="#"
+    target="_self"
+    badge="Skill Development"
+    tags={["SQL", "Data Querying", "Relational Databases"]}
+  />
+
+</BaseLayout>
