@@ -11,7 +11,7 @@ This platform documents my structured learning journey, practical projects, tech
 
 I am currently pursuing:
 
-- **Google Data Analytics Professional Certificate**
+- **Google Advanced Data Analytics Professional Certificate**
 - **IBM Data Analyst Professional Certificate**
 
 These programs are strengthening my foundation in data cleaning, transformation, analysis, visualization, and business-driven decision making.
