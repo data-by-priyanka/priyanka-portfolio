@@ -1,6 +1,5 @@
 ---
 import SideBarFooter from "./SideBarFooter.astro";
-import SideBarMenu from "./SideBarMenu.astro";
 
 const { sideBarActiveItemID } = Astro.props;
 ---
@@ -23,9 +22,37 @@ const { sideBarActiveItemID } = Astro.props;
     </div>
 
     <!-- Navigation -->
-    <div class="flex-grow">
-      <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
-    </div>
+    <nav class="flex-grow space-y-2">
+
+      <a href="/"
+         class={`block px-3 py-2 rounded-lg hover:bg-emerald-500 hover:text-white transition ${
+           sideBarActiveItemID === "about" ? "bg-emerald-500 text-white" : ""
+         }`}>
+        About
+      </a>
+
+      <a href="/projects"
+         class={`block px-3 py-2 rounded-lg hover:bg-emerald-500 hover:text-white transition ${
+           sideBarActiveItemID === "projects" ? "bg-emerald-500 text-white" : ""
+         }`}>
+        Projects
+      </a>
+
+      <a href="/notes"
+         class={`block px-3 py-2 rounded-lg hover:bg-emerald-500 hover:text-white transition ${
+           sideBarActiveItemID === "notes" ? "bg-emerald-500 text-white" : ""
+         }`}>
+        Notes
+      </a>
+
+      <a href="/github"
+         class={`block px-3 py-2 rounded-lg hover:bg-emerald-500 hover:text-white transition ${
+           sideBarActiveItemID === "github" ? "bg-emerald-500 text-white" : ""
+         }`}>
+        GitHub
+      </a>
+
+    </nav>
 
     <!-- Footer -->
     <SideBarFooter />
