@@ -1,12 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-
-const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const latestPosts = posts.slice(0, 3);
 ---
 
 <BaseLayout
@@ -16,7 +10,7 @@ const latestPosts = posts.slice(0, 3);
 >
 
   <!-- Hero Section -->
-  <section class="mb-16 mt-6">
+  <section class="mt-8 mb-16">
     <h1 class="text-4xl font-bold mb-4">
       Priyanka Mishra
     </h1>
@@ -26,49 +20,27 @@ const latestPosts = posts.slice(0, 3);
     </h2>
 
     <p class="text-lg leading-relaxed max-w-3xl">
-      This platform documents my structured transition into Data Analytics
+      This website documents my structured transition into Data Analytics
       through disciplined learning, hands-on projects, and continuous
       technical development in SQL, Excel, and data visualization.
     </p>
   </section>
 
-  <!-- Featured Projects Placeholder -->
-  <section class="mb-12">
+  <!-- Featured Work -->
+  <section class="mb-16">
     <h3 class="text-3xl font-semibold mb-6">
       Featured Projects
     </h3>
 
     <HorizontalCard
-      title="Project Case Study – Coming Soon"
+      title="Data Analysis Case Study – Coming Soon"
       img="/post_img.webp"
-      desc="End-to-end data analysis project demonstrating structured problem-solving, data cleaning, and insight generation."
+      desc="An end-to-end data analysis project demonstrating structured problem-solving, data cleaning, transformation, and insight generation."
       url="/projects"
       target="_self"
       badge="In Progress"
     />
+
   </section>
-
-  <!-- Latest Learning Posts -->
-  {latestPosts.length > 0 && (
-    <section>
-      <h3 class="text-3xl font-semibold mb-6 mt-12">
-        Latest Learning Entries
-      </h3>
-
-      {latestPosts.map((post) => (
-        <>
-          <HorizontalCard
-            title={post.data.title}
-            img={post.data.heroImage}
-            desc={post.data.description}
-            url={"/blog/" + post.slug}
-            target="_self"
-            badge={post.data.badge}
-          />
-          <div class="divider my-0"></div>
-        </>
-      ))}
-    </section>
-  )}
 
 </BaseLayout>
